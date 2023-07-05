@@ -20,7 +20,7 @@ class WelcomeViewModel @Inject constructor(private val pixRepo: PixRepo) : ViewM
     private lateinit var timer: CountDownTimer
 
     fun startOpening(view: View) {
-        timer = object : CountDownTimer(1000, 100) {
+        timer = object : CountDownTimer(5000, 100) {
             override fun onTick(millisUntilFinished: Long) {
                 // At each tick, the progress is calculated and the progress bar is updated.
                 val progress = ((5000 - millisUntilFinished) / 50).toInt()
