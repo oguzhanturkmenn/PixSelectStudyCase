@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.oguzhanturkmen.pixselectcasestudy.ui.welcome.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_breedFragment"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/breedFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/breedFragment"
+        android:name="com.oguzhanturkmen.pixselectcasestudy.ui.breed.BreedFragment"
+        android:label="fragment_breed"
+        tools:layout="@layout/fragment_breed" >
+        <action
+            android:id="@+id/action_breedFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        tools:layout="@layout/fragment_details"
+        android:name="com.oguzhanturkmen.pixselectcasestudy.ui.details.DetailsFragment"
+        android:label="DetailsFragment" >
+        <argument
+            android:name="breed"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailsFragment_to_fullScreenImageFragment"
+            app:destination="@id/fullScreenImageFragment" />
+        <argument
+            android:name="subkind"
+            app:argType="string"
+            app:nullable="true" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/fullScreenImageFragment"
+        tools:layout="@layout/fragment_full_screen_image"
+        android:name="com.oguzhanturkmen.pixselectcasestudy.ui.fullscreen.FullScreenImageFragment"
+        android:label="FullScreenImageFragment" >
+        <argument
+            android:name="fullimage"
+            app:argType="string" />
+    </fragment>
+</navigation>

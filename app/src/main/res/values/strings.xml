@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PixSelectCaseStudy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sub_breeds">Sub Breeds</string>
+    <string name="choose">Choose</string>
+
+</resources>

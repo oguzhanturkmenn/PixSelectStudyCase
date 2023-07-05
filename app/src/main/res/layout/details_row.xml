@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="imageData"
+            type="String" />
+    </data>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_circle_dog"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginTop="@dimen/margin_s"
+            android:src="@drawable/ic_launcher_background"
+            android:downloadUrl="@{imageData}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+           />
+
+
+        <!-- Diğer resimler için ImageView'lar eklenebilir -->
+
+</layout>
